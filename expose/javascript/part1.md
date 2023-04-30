@@ -1,0 +1,8 @@
+## Part 1
+
+1. Line 9 prints **"values added: 20"**. This is because in line 3, add = true and so we evaluate the code in line 5-7 to get results = 10 + 10 = 20. The var result exists in the same scope, functional scope, as the print statement in line 9. Therefore, line 9 prints the string in line 9 proceeded by the value of result. 
+2. Line 13 prints **"final result: 20**". As mentioned in question 1, add evaluates to true and the scope of this variable is functional scope, so when we get to line 13, the value of result is 20. Thus line 13 prints out the string in line 13 proceeded by the value of result. 
+3. Line 9 prints **"values added: 20"**. This is because in line 3, add = true and so we evaluate the code in line 5-7 to get results = 10 + 10 = 20. The var result exists in the same scope, block scope, as the print statement in line 9. Therefore, line 9 prints the string in line 9 proceeded by the value of result. 
+4. Line 13 gives an **error**. This is because result is created within the if statement from line 5-9. At line 13, result no longer exists as a variable because we exited the scope that result was created in. We get thrown an error for referencing an undefined variable. 
+5. Line 9 gives an **error**. This is because const is a variable that has the block scope and cannot be reassigned. We we enter the conditional statement is entered, the reassignment statement in line 7 will throw an error for result because we cannot reassign this type of variable. 
+6. Line 13 gives an **error**. Because line 9 gives an error first, line 13's error statement does not get reached while this code gets run. Line 13's error is because the scope of the variable result does not exists and will throw an error for referencing an undefined variable. 
